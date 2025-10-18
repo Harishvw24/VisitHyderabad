@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vist Hyderabad</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+</head>
+<body class="visitbody">
+    <section class="header">
+        <nav>
+        <a href="index.html"><img src="images/finallogo.png" alt="logo"></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="Charminar.html">Charminar</a></li>
+            <li><a href="GolcondaFort.html">GolcondaFort</a></li>
+            <li><a href="RamojiFilmCity.html">RamojiFilmCity</a></li>
+            <li><a href="BirlaMandir.html">BirlaMandir</a></li>
+            <li><a href="Otherplaces.html">Otherplaces</a></li>
+            <li><a href="Visit.html">Visit</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    <section class="visitpage">
+        <h1>Plan Your Visit to Hyderabad?</h1>
+        <form action="">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input id="fullname" type="text" placeholder="e.g. John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="Number">Number of Guests</label>
+                <input id="number" type="number" placeholder="2" required>
+            </div>
+            <div class="form-group">
+                <label for="visit-date">Preferred Date of Visit</label>
+                <input id="visit-date" type="date" required>
+            </div>
+            <div class="form-group">
+                <label for="requests">Additional Requests or Information</label>
+                <textarea id="requests" placeholder="Any special requirements, preferred time, etc."></textarea>
+            </div>
+            <button type="submit" class="hero-btn">Submit</button>
+        </form>
+        
+    </section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+        navLinks.style.right = "0";
+      }
+      function hideMenu(){
+        navLinks.style.right = "-200px";
+      }
+    </script>
+</body>
+</html>

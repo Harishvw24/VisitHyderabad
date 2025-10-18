@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vist Hyderabad</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+</head>
+<body class="indexbody">
+    <section class="header">
+        <nav>
+        <a href="index.html"><img src="images/finallogo.png" alt="logo"></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="Charminar.html">Charminar</a></li>
+            <li><a href="GolcondaFort.html">GolcondaFort</a></li>
+            <li><a href="RamojiFilmCity.html">RamojiFilmCity</a></li>
+            <li><a href="BirlaMandir.html">BirlaMandir</a></li>
+            <li><a href="Otherplaces.html">Otherplaces</a></li>
+            <li><a href="Visit.html">Visit</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+            <h1>Hyderabad</h1>
+            <a href="Visit.html" class="hero-btn">The City of Pearls</a>
+        </div>
+    </section>
+    <!----Main Content------>
+    <section class="Main-content">
+      <div class="headercontent">
+        <h1>Welcome to Hyderabad</h1>
+        <h2>The Hub to Many Attractions of Southern India</h2>
+      </div>
+       <div class="row">
+        <div class="column">
+            <img src="images/history.jpg" alt="">
+           <p>Hyderabad’s history is a tale of opulence, power, and timeless beauty. Founded in 1591 by Muhammad Quli Qutb Shah of the Qutb Shahi dynasty, the city was envisioned as a symbol of cultural grandeur and architectural brilliance. The Charminar, standing at its heart, remains a magnificent reminder of that golden age. Later, under the rule of the Nizams, Hyderabad evolved into one of the richest princely states in India — a city of pearls, palaces, and prosperity. The Golconda Fort, once famous for its diamond mines that produced gems like the Koh-i-Noor and Hope Diamond, reflects the wealth and influence Hyderabad commanded in world trade and politics. Every corner of the old city still whispers stories of royal processions, poetic gatherings, and a glorious past that shaped the Deccan’s destiny.</p>
+        </div>
+        <div class="column">
+          <img src="images/culture.jpg" alt="">
+            <p>Hyderabad’s culture is an exquisite blend of traditions, languages, and lifestyles — a place where the sophistication of Urdu tehzeeb meets the vibrance of Telugu and Deccani roots. It is a city where Hindu and Muslim festivals are celebrated with equal enthusiasm, where Bonalu processions fill the streets with rhythm while Muharram tazias resonate with devotion. The city’s people are known for their humility, hospitality, and refined etiquette — traits passed down through generations of cultural mingling. From the soulful qawwalis echoing through ancient mosques to the graceful steps of classical Kuchipudi performances, Hyderabad thrives as a melting pot of art, music, and literature. Its bazaars, like Laad Bazaar and Sultan Bazaar, are living museums — shimmering with pearls, bangles, and handcrafted textiles that have enchanted traders for centuries.</p>
+        </div>
+        <div class="column">
+          <img src="images/biryani.webp" alt="">
+            <p>Hyderabadi cuisine is a masterpiece that unites royal Mughlai flavors with robust South Indian spices, creating a culinary legacy celebrated across the world. The legendary Hyderabadi Biryani, slow-cooked with basmati rice, tender meat, and aromatic saffron, is not just a dish — it’s an emotion. Haleem, a Ramadan specialty, draws food lovers from every corner of the city with its rich texture and heavenly taste. The city’s Irani cafés, serving steaming cups of chai alongside buttery Osmania biscuits, preserve a nostalgia that bridges old Hyderabad and modern life. From street-side kebabs to festive feasts served in royal platters, Hyderabad’s food reflects its diversity — flavorful, heartwarming, and deeply rooted in tradition. It’s a city where every meal feels like a celebration of history and heritage.</p>
+        </div>
+        <div class="column">
+          <img src="images/it.jpg" alt="">
+            <p>Modern Hyderabad stands as a beacon of India’s technological revolution — proudly known as Cyberabad. With the rise of HITEC City and Gachibowli, it has transformed into one of Asia’s fastest-growing IT hubs, hosting giants like Microsoft, Google, Amazon, and Facebook. The city’s innovation ecosystem is further fueled by T-Hub, India’s largest startup incubator, nurturing thousands of entrepreneurs and tech visionaries. Yet, what makes Hyderabad truly special is its ability to balance the old and the new — preserving its centuries-old charm while pioneering advancements in artificial intelligence, biotechnology, and space technology. This seamless fusion of heritage and innovation makes Hyderabad not just a city, but an idea — where tradition inspires progress, and progress honors tradition.</p>
+        </div>
+       </div>
+    </section>
+    <!---Footer---->
+     <!-- Call to Action -->
+          <section class="Visitfinal">
+            <div class="visitor-text">
+                <h1>Plan to Visit Hyderabad?</h1>
+                <button><a href="Visit.html">Visit</a></button>
+            </div>
+          </section>
+
+      <section class="footer">
+                    <p>Designed and Developed by Hari</p>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+        navLinks.style.right = "0";
+      }
+      function hideMenu(){
+        navLinks.style.right = "-200px";
+      }
+    </script>
+</body>
+</html>
