@@ -126,6 +126,17 @@ nav .fa{
     .nav-links ul{
         padding: 30px;
     }
+    .hero-btn{
+        font-size: 25px;
+        padding: 10px 20px;
+        color: white;
+        cursor: pointer;
+    }
+    .hero-btn:hover{
+    border: 1px solid black;
+    background: black;
+    transition: 1s;
+    }
 }
 .Main-content {
       width: 100%;
@@ -217,13 +228,15 @@ nav .fa{
 
       text-align: center;
 
+      justify-content:center;
+
     }
 
 
 
     .column img {
 
-      width: 40%;
+      width: 80%;
 
     }
 
@@ -333,4 +346,5 @@ nav .fa{
         padding: 8px;
     }
     
+
 }
