@@ -21,17 +21,9 @@ Open index.html in your browser.
 
 That’s it! 🎉
 
-📁 Folder Structure
-visit-hyderabad/
-│
-├── index.html
-├── css/
-│   └── styles.css
-├── images/
-│   └── (your images here)
-└── README.md
+Deployment link:
 
-💡 Features
+https://visit-hyderabad.vercel.app/
 
 Fully responsive layout
 
@@ -43,7 +35,7 @@ Fast loading
 
 👨‍💻 Author
 
-Made by [Your Name]
+Made by Hari(Harish)
 
 📜 License
 
