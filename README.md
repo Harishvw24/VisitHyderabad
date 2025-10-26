@@ -5,7 +5,7 @@ A simple website about the beautiful city Hyderabad, made using only HTML and CS
 
 🌍 Overview
 
-This website shows the famous places in Hyderabad like Charminar, Golconda Fort, Ramoji Film City, Hussain Sagar, and more. It has clean design and works on mobile and desktop screens.
+This website shows the famous places in Hyderabad like Charminar, Golconda Fort, Ramoji Film City, Birla Mandir, and more. It has clean design and works on mobile and desktop screens.
 
 🛠️ Built With
 
@@ -21,10 +21,6 @@ Open index.html in your browser.
 
 That’s it! 🎉
 
-Deployment link:
-
-https://visit-hyderabad.vercel.app/
-
 Fully responsive layout
 
 Clean and simple design
@@ -32,6 +28,12 @@ Clean and simple design
 No JavaScript used
 
 Fast loading
+
+
+Deployment link:
+
+https://visit-hyderabad.vercel.app/
+
 
 👨‍💻 Author
 
