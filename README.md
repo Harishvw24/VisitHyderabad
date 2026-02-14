@@ -10,6 +10,11 @@ A clean, responsive, multi-page website that highlights Hyderabad's heritage, cu
 
 Visit Hyderabad is a static website showcasing key destinations such as Charminar, Golconda Fort, Ramoji Film City, Birla Mandir, and other popular places. The layout is designed to be readable and consistent across desktop and mobile screens.
 
+<img width="1882" height="894" alt="image" src="https://github.com/user-attachments/assets/91eed516-0214-4372-b00c-18e439bea523" />
+<img width="1882" height="894" alt="image" src="https://github.com/user-attachments/assets/91eed516-0214-4372-b00c-18e439bea523" />
+
+
+
 ## Features
 
 - Responsive layout with a consistent grid for content sections
