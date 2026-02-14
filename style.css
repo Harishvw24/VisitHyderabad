@@ -2,6 +2,16 @@
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --content-max: 1200px;
+    --content-wide: 1400px;
+    --gutter: 20px;
 }
 .header{
     min-height: 120vh;
@@ -36,9 +46,14 @@ nav{
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
+    max-width: var(--content-wide);
+    margin: 0 auto;
+    width: 100%;
 }
 nav img{
-    width: 250px;
+    width: clamp(160px, 18vw, 230px);
+    height: auto;
+    display: block;
 
 }
 .nav-links{
@@ -99,8 +114,20 @@ nav .fa{
     display: none;
 }
 @media(max-width:700px){
+    .header{
+        min-height: 90vh;
+    }
+    nav{
+        padding: 4% 6%;
+    }
+    nav img{
+        width: 170px;
+    }
     .text-box h1{
         font-size: 40px;
+    }
+    .text-box{
+        top: 55%;
     }
     .nav-links ul li {
         display: block;
@@ -141,9 +168,9 @@ nav .fa{
 .Main-content {
       width: 100%;
       text-align: center;
-      padding: 30px 20px;
+            padding: 50px 0 40px;
       background-color: #f8f8f8;
-      font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
       color: #333;
     }
 
@@ -160,15 +187,36 @@ nav .fa{
       margin-bottom: 30px;
     }
 
+.headercontent {
+                max-width: var(--content-max);
+                margin: 0 auto 20px;
+                padding: 0 var(--gutter);
+}
+
+.row {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                max-width: var(--content-wide);
+                width: 100%;
+                margin: 0 auto;
+                padding: 10px var(--gutter) 20px;
+}
+
 .column {
-    display: flex;
-    background: white;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    max-width: 1400px;
-    justify-content: center;
-    margin-top: 60px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: grid;
+        grid-template-columns: minmax(240px, 40%) 1fr;
+        grid-template-areas:
+            "image heading"
+            "image text";
+    gap: 8px 28px;
+        background: #ffffff;
+        border-radius: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -183,38 +231,82 @@ nav .fa{
 
 
 
-  .column img {
+    .column img {
 
-    width: 40%;
+        grid-area: image;
 
-    object-fit: cover;
+        width: 100%;
 
-    margin: 30px;
+        height: 100%;
 
-  }
+        min-height: 240px;
+        aspect-ratio: 4 / 3;
+
+        object-fit: cover;
+
+        border-radius: 12px;
+
+    }
 
 
 
-  /* 🔻 Your requested style for h3 */
+    /* 🔻 Your requested style for h3 */
 
 
-  .column p {
+    .column h3 {
 
-    font-size: 19px;
+        grid-area: heading;
 
-    color: black;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
-    text-align: center;
+        color: #b31206;
 
-    padding: 10px;
+        margin: 8px 10px 0 6px;
 
-    margin-top: 40px;
+        text-align: left;
 
-    margin-bottom: 40px;
+    }
 
-    margin-right: 30px
+    .column h3::before {
 
-  }
+        content: "";
+
+        display: inline-block;
+
+        width: 3px;
+
+        height: 24px;
+
+        background: #b31206;
+
+        border-radius: 999px;
+
+        margin: 0;
+
+    }
+
+    .column p {
+
+        grid-area: text;
+
+        font-size: 18px;
+
+        color: #222;
+
+        text-align: left;
+
+        line-height: 1.75;
+
+        padding: 14px 16px;
+
+        margin: 0 10px 10px 6px;
+
+        border: none;
+
+    }
 
 
 
@@ -224,11 +316,16 @@ nav .fa{
 
     .column {
 
-      flex-direction: column;
+            grid-template-columns: 1fr;
 
-      text-align: center;
+            grid-template-areas:
+                "image"
+                "heading"
+                "text";
 
-      justify-content:center;
+            text-align: left;
+
+            padding: 14px;
 
     }
 
@@ -236,7 +333,8 @@ nav .fa{
 
     .column img {
 
-      width: 80%;
+            min-height: 200px;
+            aspect-ratio: 16 / 10;
 
     }
 
@@ -251,83 +349,193 @@ nav .fa{
       font-size: 6px;
 
     }
+
+        .column h3 {
+
+            margin: 8px 8px 0;
+
+            font-size: 20px;
+
+            text-align: left;
+
+        }
+
+        .column p {
+
+            margin: 8px 8px 16px;
+
+            padding: 12px;
+
+            font-size: 16px;
+
+            text-align: left;
+
+        }
   }
-  .visitor-text{
-    margin-top: 20px;
-    text-align: center;
-    background: url(images/golconda-fort-9322.jpg);
-    border-radius: 10px;
-    box-sizing: border-box;
-    height: 200px;
-    box-shadow: var(--shadow);
-    max-width: 1400px;
-    justify-content: center;
-    margin: 30px;
-  }
+    .Visitfinal {
+        padding: 50px var(--gutter);
+        background: #f8f3f2;
+    }
+
+    .visitor-text{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+        background: url(images/golconda-fort-9322.jpg) center / cover no-repeat;
+        border-radius: 18px;
+        box-sizing: border-box;
+        min-height: 240px;
+        max-width: var(--content-wide);
+        width: 100%;
+        margin: 0 auto;
+        padding: 28px 20px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+        overflow: hidden;
+    }
+
+    .visitor-text::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.2));
+    }
 
   .visitor-text img {
     width: 100%;
     object-fit: cover;
   }
     .visitor-text h1 {
-        font-size: 40px;
-        color: #b31206;
-        padding-top: 50px;
+        position: relative;
+        z-index: 1;
+        font-size: clamp(28px, 4vw, 44px);
+        color: #fff;
+        margin: 0;
+        text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     }
     .visitor-text button{
-        margin-top: 20px;
+        position: relative;
+        z-index: 1;
+        margin-top: 4px;
         padding: 12px 34px;
-        font-size: 20px;
-        background: black;
+        font-size: 18px;
+        background: #b31206;
         border: none;
-        border-radius: 5px;
+        border-radius: 999px;
         cursor: pointer;
+        transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
     .visitor-text button a{
         text-decoration: none;
         color: white;
+        display: inline-block;
     }
     .visitor-text button:hover{
-        color: white;
-        transition: 0.5s;
+        background: #8e0f05;
+        transform: translateY(-1px);
     }
     @media (max-width: 768px) {
-      .visitor-text h1 {
-        font-size: 28px;
-      }
+            .visitor-text h1 {
+                font-size: 28px;
+            }
       .visitor-text button{
         padding: 10px 20px;
         font-size: 16px;
       }
     }
-    .footer{
-    background: grey;
-    box-sizing:border-box;
-    background-color: #b31206;    
-    text-align: center;
-    color: white;           
-    padding: 40px 20px;
-    }
+        .footer{
+        box-sizing:border-box;
+        background: linear-gradient(135deg, #8e0f05, #b31206);
+        text-align: center;
+        color: white;
+        padding: 60px var(--gutter);
+        }
+
+        .footer-content{
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer h3{
+            font-size: 22px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer p{
+            font-size: 15px;
+            margin: 6px 0;
+            color: #f6f1f1;
+        }
+
+        .footer-note{
+            font-size: 13px;
+            color: #f2d7d7;
+        }
 
 /* matches if the id is on the header itself or on a parent element */
 
 .visitpage {
-    max-width: 500px;
-    width: 40%;
-    margin: 30px auto;
-    padding: 40px;
-    height: 600px;
+    max-width: 640px;
+    width: min(92%, 640px);
+    margin: 40px auto;
+    padding: 36px;
+    height: auto;
     border-radius: 10px;
     box-sizing: border-box;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.08);
     display: block;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+.visitpage h1{
+    text-align: center;
+    color: #b31206;
+    margin-bottom: 20px;
+    font-size: 28px;
 }
 .visitpage .form-group {
     margin-bottom: 10px;
     display: block;
     text-align: left;
     padding: 10px;
+}
+.visitpage .form-group label{
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 6px;
+}
+.visitpage .form-group input,
+.visitpage .form-group textarea{
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    outline: none;
+    font-size: 15px;
+    background: #fff;
+    box-sizing: border-box;
+}
+.visitpage .form-group textarea{
+    min-height: 120px;
+    resize: vertical;
+}
+.visitpage .hero-btn{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 12px 20px;
+    text-align: center;
+    background: #b31206;
+    border: none;
+}
+.visitpage .hero-btn:hover{
+    background: #8e0f05;
 }
 @media screen and (max-width: 600px) {
     .visitpage {
@@ -344,6 +552,12 @@ nav .fa{
 
     .visitpage .form-group input, .visitpage .form-group textarea {
         padding: 8px;
+    }
+    .visitpage h1{
+        font-size: 22px;
+    }
+    .visitpage .hero-btn{
+        font-size: 18px;
     }
     
 
